@@ -1,65 +1,45 @@
-// console.log("Hellow");
-// const cities = require("./myData/mydata");
+// console.log("Hello, World!");
 
+// const cities = require("./data/mydata.js");
 // console.log(cities);
 
-// const chalk = require("chalk");
-// console.log(chalk.backgroundColorNames("hellow"));
+// const chalk= require("chalk");
+// console.log(chalk.blue("Hello, World!"));
 
 // import chalk from "chalk";
-// console.log(chalk.blue("hellow"));
+// console.log(chalk.blue("Hello, World!"));
 
 // const os = require("os");
-// const userInfo = os.userInfo();
-// const arch = os.arch();
-// const homedir = os.homedir();
-// console.log(os.platform());
-// console.log(userInfo);
-// console.log(arch);
-// console.log(homedir);
+// const userinfo = os.userInfo();
+// const platform = os.platform();
+// const architecture = os.arch();
+// const uptime = os.uptime();
+// console.log(userinfo);
+// console.log(platform);
+// console.log(architecture);
+// console.log(uptime);
 
-// const fs = require("fs");
-// fs.writeFileSync("myData/data.txt", "MEOWWW");
+// const fs= require("fs");
+// fs.writeFileSync("data/data.txt", "Hello, World!");
 
 // const path = require("path");
-// const filePath = path.join(__dirname, "myData", "data.txt");
+// const filePath = path.join(__dirname, "data", "data.txt");
 // console.log(filePath);
 
-// const process = require("process");
-// console.log(process.cwd());
-// console.log(process.env.PATH);
-// console.log(process.env);
-// console.log(process.pid);
-
-// console.log(process.argv[2]); // indexing
+// const process= require("process");
+// console.log(process.argv[2]);
 
 require("dotenv").config();
-console.log(process.env.PORT)
-
-// const http = require("http");
-// const server = http.createServer((req, res)=>{
-//     res.write("<h1>Welcome to node.js</h1>");
-//     res.end();
-// });
-
-// // run the server
-// server.listen(process.env.PORT || 5000, () => {
-//     console.log(`Running on port ${process.env.PORT}`)
-// });
-
-const http = require('http');
+// console.log(process.env.PORT);
+const port = process.env.PORT || 3000;
 
 const server = http.createServer((req, res) => {
-  if (req.url === '/') {
-    res.writeHead(200, { 'Content-Type': 'text/html' });
-    res.end(`
-        <h1 style='color:navy'>Hello from Node.js!</h1>
-        <p>Built with pure Node.js http module.</p>
-    `);
-  } else {
-    res.writeHead(404, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify({ error: 'Route not found' }));
-  }
+    res.writeHead(200, { "Content-Type": "text/html" });
+    res.write("<h1>Hello, World!</h1>");
+    res.write("<p>This is a simple HTTP server.</p>");
+    res.end();
 });
 
-server.listen(3000, () => console.log('Running on :3000'));
+server.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+});
