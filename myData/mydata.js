@@ -1,2 +1,3 @@
-const cities = ["Goa", "Delhi", "Mumbai"];
+const cities = ["goa", "delhi", "mumbai", "bangalore", "chennai"];
+
 module.exports = cities;
