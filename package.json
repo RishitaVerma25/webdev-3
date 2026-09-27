@@ -1,0 +1,29 @@
+{
+  "name": "webdev-3",
+  "version": "1.0.0",
+  "description": "Comprehensive codebase for **Web Dev III Coursework** covering Node.js fundamentals, core modules, HTTP server development, Express framework, MVC architecture, route isolation, and user/tour management APIs across Days 1 to 9.",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RishitaVerma25/webdev-3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/RishitaVerma25/webdev-3/issues"
+  },
+  "homepage": "https://github.com/RishitaVerma25/webdev-3#readme",
+  "dependencies": {
+    "dotenv": "^18.0.4",
+    "express": "^5.2.1",
+    "mongoose": "^9.10.2"
+  }
+}
